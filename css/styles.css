@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* contenedor principal */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* navegacion */
+nav {
+    background: #333;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav .menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+}
+
+nav .menu li a:hover {
+    background: #555;
+}
+
+nav .menu li a.activo {
+    background: #4CAF50;
+}
+
+/* contenido principal */
+main {
+    min-height: calc(100vh - 150px);
+    padding: 2rem 0;
+}
+
+/* banner */
+.banner {
+    background: #4169E1;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* tarjetas */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tarjeta {
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tarjeta:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.tarjeta h3 {
+    color: #4169E1;
+    margin-bottom: 1rem;
+}
+
+/* formularios */
+.formulario {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.formulario h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.campo {
+    margin-bottom: 1.5rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #4169E1;
+}
+
+/* botones */
+.boton {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.boton-principal {
+    background: #4169E1;
+    color: white;
+}
+
+.boton-principal:hover {
+    background: #315bb3;
+}
+
+.boton-completo {
+    width: 100%;
+}
+
+.boton-exito {
+    background: #4CAF50;
+    color: white;
+}
+
+.boton-exito:hover {
+    background: #388E3C;
+}
+
+.boton-peligro {
+    background: #f44336;
+    color: white;
+}
+
+.boton-peligro:hover {
+    background: #d32f2f;
+}
+
+.boton-advertencia {
+    background: #FF9800;
+    color: white;
+}
+
+.boton-advertencia:hover {
+    background: #F57C00;
+}
+
+.boton-secundario {
+    background: #757575;
+    color: white;
+}
+
+.boton-secundario:hover {
+    background: #616161;
+}
+
+/* alertas */
+.alerta {
+    padding: 1rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    transition: opacity 0.5s;
+}
+
+.alerta-exito {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.alerta-error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.alerta-info {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+}
+
+/* tablas */
+.tabla-contenedor {
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead {
+    background: #333;
+    color: white;
+}
+
+table th,
+table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:hover {
+    background: #f5f5f5;
+}
+
+/* noticias */
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.noticia-card {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.noticia-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.noticia-imagen {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #4169E1;
+}
+
+.noticia-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.noticia-contenido {
+    padding: 1.5rem;
+}
+
+.noticia-contenido h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.noticia-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.noticia-texto {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* pie de pagina */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* utilidades */
+.texto-centro {
+    text-align: center;
+}
+
+.margen-superior {
+    margin-top: 2rem;
+}
+
+.margen-inferior {
+    margin-bottom: 2rem;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    nav .contenedor {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav .menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+    
+    .noticias-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    table th,
+    table td {
+        padding: 0.5rem;
+    }
+}
+/* Espaciado para parrafos y textos sin br */
+p strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formulario p {
+    line-height: 1.8;
+}
+
+/* Caja de usuarios de prueba en login */
+.formulario > div p {
+    line-height: 1.8;
+}
+
+/* Espaciado para listas de texto */
+.info-texto {
+    line-height: 1.8;
+}
+
+/* Espaciado en tablas para texto multilinea */
+table td {
+    line-height: 1.6;
+    font-size: 0.9rem;
+    color: #666;
+    }
+
+.info-usuarios-prueba p {
+    margin: 0.5rem 0;
+}
+
+/* Estilos para info de usuarios de prueba - FORZAR SALTOS DE LINEA */
+.info-usuarios-prueba {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f4f4f4;
+    border-radius: 3px;
+}
+
+.info-usuarios-prueba .info-titulo {
+    display: block !important;
+    margin: 0 0 1rem 0 !important;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.info-usuarios-prueba .info-linea {
+    display: block !important;
+    margin: 0.5rem 0 !important;
+    font-size: 0.9rem;
+    color: #666;
+    width: 100%;
+}
+
+.info-usuarios-prueba p {
+    display: block !important;
+    margin: 0.5rem 0 !important;
+    width: 100%;
+}
+
